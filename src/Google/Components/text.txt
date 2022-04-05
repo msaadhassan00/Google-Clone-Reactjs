@@ -1,0 +1,72 @@
+ {/* { value &&  (option == "All"
+                    ? results?.map((result, index) => {
+                          return <Results data={result} key={index} />;
+                      })
+                    : newsdata.map((news) => {
+                       
+                         return(
+                            <News data={news} key={news.id} />
+                         );
+                      }))
+        }
+        { value && imgResult?.map((result, index) => {
+                          return <Images data={result} key={index} />;
+                      })
+        } */}
+
+
+
+        newsdata.map((news) => {
+                       
+                return(
+                   <News data={news} key={news.id} />
+                );
+             }
+
+
+
+        
+
+
+          return(
+            results?.map((result, index) => {
+              return <Results data={result} key={index} />;
+          })
+          )
+
+
+
+
+
+
+
+
+
+
+
+import React, { useContext, useEffect, useState } from 'react'
+import { googleContext } from '../Context/Context';
+import Results from './Results';
+import News from './News'
+import { BallTriangle } from "react-loader-spinner";
+import Loader from 'react-spinners/BounceLoader';
+import { useParams } from 'react-router-dom';
+import Images from './Images';
+
+
+
+
+
+   
+  //  console.log(value)
+   
+      
+     
+  function Greeting() {
+    
+    if (option=="All") {
+     
+    }
+    else if(option == "News"){
+    
+    }
