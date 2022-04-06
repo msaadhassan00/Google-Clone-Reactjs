@@ -27,7 +27,7 @@ nav('/Search/All')
     
 
     function check(e){
-      if(e.code === 'Enter'){
+      if( e.keyCode === 13){
         handleSearch(e)
       }
     }
@@ -71,7 +71,7 @@ nav('/Search/All')
                 type="text"
                 ref={inputRef}
                 onKeyDown={(e)=>check(e)}
-                className="focus:outline-none flex-grow bg-[#202124] "
+                className="focus:outline-none overflow-hidden flex-grow bg-[#202124] "
               />
             </form>
             <div className="flex-none w-5">
@@ -80,7 +80,7 @@ nav('/Search/All')
           </div>
           {/* Button Group */}
           <div className="items-center justify-between md:justify-evenly w-1/3 my-8 sm:w-1/3 flex " >
-            <button className="bg-[#303134] p-2 rounded-md w-40 sm:text-sm" //onClick={(e)=>handleSearch(e)}
+            <button className="bg-[#303134] p-2 rounded-md w-40 sm:text-sm" onClick={(e)=>handleSearch(e)}
              >
               Google Search
             </button>

@@ -29,7 +29,7 @@ const Header = () => {
    }
 
    function check(e){
-     if(e.code === 'Enter'){
+     if(e.keyCode === 13){
        handleSearch(e)
      }
    }

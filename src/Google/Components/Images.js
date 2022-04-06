@@ -6,10 +6,9 @@ const Images = ({data}) => {
    // console.log(data)
   return (
   
-      <div className="w-1/2 ">
+      <div className="">
     <a href={link.href} target="_blank ">
-    <img src={image.src} alt="" className="object-cover"  />
-    {/* <p className=" text-blue-800 dark:text-blue-400 text-lg" >{title}</p> */}
+    <img src={image.src} alt="" className="pl-32"  />
     </a>
 </div> 
   

@@ -26,7 +26,7 @@ const Fetching = () => {
     setloading(true)
     setTimeout(() =>{
       setloading(false)
-    },5000)
+    },4000)
   },[option])
  
   
@@ -147,8 +147,8 @@ const Fetching = () => {
     
 
   return (
-   <div className="bg-[#202124]">
-    {loading? ( <ClipLoader color={"#123abc"} loading={loading}  size={150} />) : (<RtrnAll />) }
+   <div className="bg-[#202124] h-screen ">
+    {loading? ( <div className="flex justify-center items-center h-screen"><ClipLoader color={"#123abc"} loading={loading}  size={150} /></div> ) : (<RtrnAll  />) }
    </div>
   )
 }
