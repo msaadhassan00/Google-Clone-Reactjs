@@ -9,61 +9,62 @@ import { useNavigate, useParams } from "react-router-dom";
 import { googleContext } from "../Context/Context";
 
 const Header = () => {
-
-  const inputRef = useRef(null)
+  const inputRef = useRef(null);
 
   const nav = useNavigate();
 
-  const { value,setValue } = useContext(googleContext)
-//console.log(value, setValue)
-   const handleSearch=(e)=>{
+  const { value, setValue } = useContext(googleContext);
+  //console.log(value, setValue)
+  const handleSearch = (e) => {
     // console.log(inputRef.current.value);
-     e.preventDefault();
-   if(!inputRef.current.value) return
-    setValue(inputRef.current.value)
-     //nav('/Search')
-   }
+    e.preventDefault();
+    if (!inputRef.current.value) return;
+    setValue(inputRef.current.value);
+    //nav('/Search')
+  };
 
-   function goto (e) {
-    nav('/')
-   }
+  function goto(e) {
+    nav("/");
+  }
+  function reset(e) {
+   console.log("ok");
+   inputRef.current.value = ''
+  }
 
-   function check(e){
-     if(e.keyCode === 13){
-       handleSearch(e)
-     }
-   }
+  function check(e) {
+    if (e.keyCode === 13) {
+      handleSearch(e);
+    }
+  }
 
-   useEffect(() => {
-    inputRef.current.value = value
-   }, )
-   
-  
+  useEffect(() => {
+    inputRef.current.value = value;
+  });
+
   return (
     <>
-         <div className="w-90 bg-[#202124] flex items-center">
+      <div className="w-90 bg-[#202124] flex items-center">
         <div className="img">
-        <img
+          <img
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
             className="w-28 hover:cursor-pointer  p-4"
             alt="logo"
-            onClick={(e)=>goto(e)}
+            onClick={(e) => goto(e)}
           />
         </div>
         <div className="w-1/2 shadow-md rounded-full p-2 flex items-center text-white bg-[#303134]">
           <form action="" className="flex flex-grow items-center">
             <input
               type="text"
-             ref={inputRef}
-            
-            onKeyDown={(e) => check(e)}
+              ref={inputRef}
+              onKeyDown={(e) => check(e)}
               className="focus:outline-none flex-grow bg-[#303134] "
             />
-            <AiOutlineClose className="pr-2 hidden sm:flex text-xl cursor-pointer" />
+            <AiOutlineClose className="pr-2 hidden sm:flex text-xl cursor-pointer" onClick={(e)=>reset(e)} />
           </form>
-          <div className="flex flex-none justify-evenly items-center border-l-2 w-16">
+          <div className="flex flex-none justify-evenly items-center md:border-l-2 w-16">
             <BsMic className="cursor-pointer hidden sm:flex text-lg" />
-            <BiSearch className="cursor-pointer hidden sm:flex text-lg" />
+            <BiSearch className="cursor-pointer sm:flex text-lg" />
           </div>
         </div>
         <div className="right text-white flex items-center ml-auto p-5 text-lg">
@@ -81,7 +82,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -6,7 +6,7 @@ const Images = ({data}) => {
    // console.log(data)
   return (
   
-      <div className="">
+      <div className="bg-[#202124] flex flex-wrap">
     <a href={link.href} target="_blank ">
     <img src={image.src} alt="" className="pl-32"  />
     </a>

@@ -1,11 +1,10 @@
 import Google from "./Google/Google";
 
-
 function App() {
   return (
-   <>
-     <Google />
-   </>
+    <>
+      <Google />
+    </>
   );
 }
 

@@ -14,8 +14,6 @@ const Search = () => {
     <>
         <Header value={value}/>
         <Options value={value}/>
-       {/* <Link to='/Search/All'>All</Link>
-       <Link to='/Search/News'>News</Link> */}
         <Fetching value={value}/>
        
     </>

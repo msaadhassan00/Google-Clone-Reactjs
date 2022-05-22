@@ -63,7 +63,6 @@ nav('/Search/All')
             <div className="flex-none w-5">
               <BiSearch className="cursor-pointer"
               onClick={(e)=>handleSearch(e)} 
-
               />
             </div>
             <form action="" className="flex flex-grow">

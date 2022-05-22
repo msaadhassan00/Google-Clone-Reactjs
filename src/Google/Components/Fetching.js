@@ -41,7 +41,7 @@ const Fetching = () => {
         'X-User-Agent': 'desktop',
         'X-Proxy-Location': 'EU',
         'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-        'X-RapidAPI-Key': '17911df630msh5762bd5cd10aa51p1c70b9jsna4b24278ee58'
+        'X-RapidAPI-Key': '8e4dff0ed4msh25ba261fd19b54fp125f58jsn83b9d9b68a4c'
       },
     };
 
